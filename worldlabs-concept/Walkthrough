@@ -1,0 +1,57 @@
+# BELUN Landing Page Walkthrough
+
+The **BELUN** cinematic landing page is now complete, built strictly according to the "Organic Brutalist" aesthetic inspired by San Rita and the AI protocol. 
+
+## Architectural Foundations
+- **Stack**: React 19, Tailwind CSS v4, GSAP 3 (with ScrollTrigger), Lucide React.
+- **Global Feel**: 
+  - An overarching **SVG Noise Filter** is running at `0.05` opacity to eliminate flat digital gradients and add a high-end cinematic grain.
+  - Deep obsidian backgrounds (`#0a0a0c`), ghost white text (`#f5f5f7`), and plasma/neon purple accents (`#b613ec`).
+  - Sophisticated dual-typography utilizing `Space Grotesk` (headings) and `Playfair Display Italic` (dramatic punchlines), alongside `JetBrains Mono` for tech/data accents.
+
+## Component Breakdowns
+
+### 1. The Floating Island Navbar
+- Hidden away by default. When the user scrolls past the hero section, the navbar gracefully morphs into a sticky `backdrop-blur-xl` container with a dark tint, revealing the navigation links.
+
+### 2. The Opening Shot (Hero)
+- A full-bleed 100vh cinematic background featuring a heavy `gradient-to-t` for maximum contrast.
+- GSAP staggered `fade-up` text sequences:
+  - "Designing the"
+  - *"Digital Worlds."* (Massive scale multiplier).
+- A magnetic button interaction that scales on hover with custom Bezier cubic easing.
+
+### 3. Interactive Functional Artifacts (Features)
+Three highly complex HTML/CSS micro-UIs:
+- **Diagnostic Shuffler**: 3 overlapping cards simulating real-time geo-spatial analysis. Uses an interval-based array shifting technique to physically shuffle the cards with spring bounce physics.
+- **Telemetry Typewriter**: A live-feed terminal running character-by-character reveals of incoming metadata strings, complete with a blinking cursor block.
+- **Ecosystem Modeling Grid**: A 7x7 grid animated by a floating SVG cursor timeline that autonomously moves, clicks 'Wednesday', and hits an imaginary "Deploy Model" button indefinitely.
+
+### 4. The Manifesto (Philosophy)
+- A full-screen dark void using an alternative, inverted layout.
+- An organic texture background moving dynamically via a GSAP `yPercent` parallax.
+- High-impact SplitText scroll-triggered chunk reveals for the core philosophy: *"Most studios focus on... predictable interfaces. We focus on... uncharted trails."*
+
+### 5. Sticky Stacking Archive (Protocol)
+- A high-end pinning scroll mechanism.
+- As the user scrolls through the 3 protocol steps, instead of standard scrolling, the previously active protocol card visually recedes (scales down, blurs aggressively, fades opacity) while the new card stacks on top.
+- Includes 3 distinct CSS/SVG visualizations:
+  1. Slowly rotating geometric motif (`MotifRotating`)
+  2. A scanning horizontal laser-line moving across a dense dot grid (`GridScanner`)
+  3. A continuous, pulsing EKG waveform path using `strokeDashoffset` (`WaveformPulse`)
+
+### 6. The Command Center (Footer)
+- A massive `rounded-t-[4rem]` footprint.
+- Features a sophisticated index of links, social references, and an animated **"SYSTEM OPERATIONAL"** blinking pulse indicator.
+
+---
+
+## How to Test
+You can jump into the folder and spin up the dev server to experience it:
+
+```bash
+cd c:\Users\User\Desktop\sat\nost\belun-app
+npm run dev
+```
+
+Scroll slowly to watch the interconnected GSAP effects handle the page flow.
